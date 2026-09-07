@@ -63,3 +63,13 @@ Gabriel Antonio Solórzano García
 Saint Leo University  
 COM 437 - Desarrollo de aplicaciones móviles  
 2026
+
+## Reflexión
+
+El uso de Git y GitHub permite que el desarrollo de software sea un
+proceso trazable y organizado. Cada cambio puede documentarse y
+revisarse antes de integrarse a la versión principal.
+
+En el desarrollo de aplicaciones móviles considero especialmente útil
+esta característica, porque permite experimentar con nuevas funciones
+sin comprometer inmediatamente una versión estable de la aplicación.
