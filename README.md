@@ -1,61 +1,148 @@
-# COM 437 - Módulo 1: Git y GitHub
+# MedAlert - COM 437
 
 ## Descripción
 
-Este repositorio fue creado como parte de la actividad del Módulo 1 de
-COM 437: Desarrollo de aplicaciones móviles, Saint Leo University.
+MedAlert es una aplicación Android desarrollada como proyecto progresivo
+para COM 437: Desarrollo de aplicaciones móviles, Saint Leo University.
 
-El propósito de esta actividad es aplicar los fundamentos de Git y GitHub
-como herramientas para el control de versiones, documentación y
-administración de proyectos de desarrollo de software.
+Su propósito es apoyar la organización personal de medicamentos y
+facilitar el acceso rápido a información básica relevante para
+situaciones de emergencia.
 
-## Objetivos
+## Problema que aborda
 
-- Comprender la función de Git como sistema de control de versiones.
-- Utilizar GitHub como repositorio remoto.
-- Identificar los estados básicos de los archivos en Git.
-- Comprender el uso de commits y ramas.
-- Reconocer la función de los pull requests.
-- Aplicar estas herramientas al desarrollo de aplicaciones móviles.
+La aplicación busca reducir las dificultades relacionadas con la
+organización de medicamentos, dosis y horarios, además de mantener
+disponible información básica como alergias y antecedentes relevantes.
 
-## Conceptos practicados
+## Objetivos de MedAlert
 
-### Repositorio
-Un repositorio permite almacenar los archivos de un proyecto y conservar
-el historial de los cambios realizados.
+- Registrar medicamentos, dosis y horarios.
+- Consultar los medicamentos registrados.
+- Mantener una ficha básica de información de emergencia.
+- Facilitar el acceso organizado a información relevante del usuario.
+- Incorporar progresivamente nuevas funciones durante COM 437.
+- Mantener un desarrollo documentado mediante Git y GitHub.
 
-### Commit
-Un commit registra un conjunto de cambios y permite mantener una historia
-del desarrollo del proyecto.
+## Funciones planificadas
 
-### Branch
-Las ramas permiten desarrollar o probar modificaciones sin alterar
-inmediatamente la versión principal del proyecto.
+La primera versión de MedAlert tendrá una estructura sencilla que podrá
+ampliarse conforme avance el curso.
 
-### Pull Request
-Un pull request permite proponer, revisar y posteriormente integrar
-cambios realizados en una rama.
+Entre las funciones previstas se encuentran:
 
-## Flujo de trabajo
+- Registro de medicamentos.
+- Registro de dosis y horarios.
+- Consulta y modificación de medicamentos.
+- Ficha básica de emergencia.
+- Registro de alergias y antecedentes relevantes.
+- Recordatorios de medicamentos.
+- Almacenamiento local de información.
+- Evaluación futura de servicios en la nube.
+- Posible incorporación de ubicación y mapas.
 
-1. Crear el repositorio.
-2. Inicializar el archivo README.md.
-3. Crear una rama de trabajo.
-4. Modificar el README.
-5. Registrar los cambios mediante un commit.
-6. Crear un pull request.
-7. Revisar los cambios.
-8. Fusionar la rama con main.
+## Módulo 1 - Git y GitHub
 
-## Aplicación al desarrollo móvil
+Durante el Módulo 1 se establecieron las bases para administrar el
+desarrollo del proyecto mediante control de versiones.
 
-El control de versiones constituye una herramienta relevante para el
-desarrollo de aplicaciones Android porque permite mantener trazabilidad
-de las modificaciones, recuperar versiones anteriores y organizar el
-trabajo durante el ciclo de desarrollo.
+Se realizaron las siguientes actividades:
 
-GitHub, además, permite documentar el proyecto y facilita la colaboración
-entre desarrolladores mediante repositorios, ramas, commits y pull requests.
+- Creación del repositorio en GitHub.
+- Creación y actualización del archivo README.md.
+- Uso de commits para registrar cambios.
+- Creación de una rama independiente.
+- Modificación del proyecto dentro de la rama.
+- Creación de un pull request.
+- Revisión y fusión de los cambios con la rama `main`.
+
+Este flujo permitirá conservar una historia verificable de la evolución
+de MedAlert durante el curso.
+
+## Módulo 2 - Diseño de aplicaciones Android
+
+Durante el Módulo 2 se inicia la organización de la arquitectura y
+navegación de MedAlert mediante conceptos fundamentales de Android.
+
+### Activities
+
+Las Activities representarán puntos principales de interacción con el
+usuario. La estructura preliminar contempla una pantalla principal desde
+la cual se podrá acceder a las distintas funciones de MedAlert.
+
+### Fragments
+
+Los Fragments permitirán organizar y reutilizar partes de la interfaz de
+usuario dentro de las Activities.
+
+Se contempla su utilización para secciones como:
+
+- Lista de medicamentos.
+- Información de emergencia.
+- Visualización de información del usuario.
+
+### Intents
+
+Los Intents permitirán establecer la navegación y comunicación entre
+diferentes componentes de la aplicación.
+
+Por ejemplo, podrán utilizarse para pasar desde la pantalla principal
+hacia una pantalla destinada al registro o consulta de medicamentos.
+
+## Estructura preliminar de navegación
+
+La navegación inicial propuesta es:
+
+`Pantalla principal`
+
+→ `Medicamentos`
+
+→ `Agregar medicamento`
+
+→ `Detalle del medicamento`
+
+→ `Ficha de emergencia`
+
+Esta estructura podrá modificarse conforme se desarrollen y prueben las
+funciones de la aplicación.
+
+## Tecnologías y herramientas
+
+El proyecto utilizará progresivamente:
+
+- Android Studio
+- Git
+- GitHub
+- Activities
+- Fragments
+- Intents
+- Material Design
+- Almacenamiento local
+- Servicios en la nube cuando sean necesarios
+
+## Control de versiones
+
+Cada avance significativo será registrado mediante Git.
+
+El flujo de trabajo utilizado será:
+
+1. Crear o seleccionar una rama de trabajo.
+2. Realizar las modificaciones.
+3. Revisar los cambios.
+4. Crear un commit.
+5. Publicar los cambios en GitHub.
+6. Crear un pull request cuando corresponda.
+7. Integrar los cambios aprobados en `main`.
+
+## Estado del proyecto
+
+**Módulo 1:** completado.
+
+**Módulo 2:** definición de la aplicación y diseño preliminar de
+Activities, Fragments e Intents.
+
+**Próximo avance:** creación de la estructura inicial de MedAlert en
+Android Studio y publicación progresiva del código en GitHub.
 
 ## Autor
 
@@ -63,13 +150,3 @@ Gabriel Antonio Solórzano García
 Saint Leo University  
 COM 437 - Desarrollo de aplicaciones móviles  
 2026
-
-## Reflexión
-
-El uso de Git y GitHub permite que el desarrollo de software sea un
-proceso trazable y organizado. Cada cambio puede documentarse y
-revisarse antes de integrarse a la versión principal.
-
-En el desarrollo de aplicaciones móviles considero especialmente útil
-esta característica, porque permite experimentar con nuevas funciones
-sin comprometer inmediatamente una versión estable de la aplicación.
