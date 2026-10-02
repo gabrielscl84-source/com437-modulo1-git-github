@@ -1,80 +1,62 @@
 # CHANGELOG - MedAlert
 
-Todos los cambios relevantes del proyecto académico MedAlert se
-documentan en este archivo.
+Todos los cambios relevantes realizados durante el desarrollo académico de MedAlert se documentan en este archivo.
 
-## \[En desarrollo\] - Módulos 7-8
+## [En desarrollo] - Módulos 7-8
 
-### Planificado
+### Implementado
 
--   Consolidar la versión funcional de la aplicación.
--   Completar y verificar las operaciones CRUD locales.
--   Realizar pruebas de navegación, formularios y persistencia.
--   Corregir errores detectados durante las pruebas.
--   Actualizar la documentación final del repositorio.
--   Preparar la entrega final del módulo 8.
+- Aplicación Android funcional.
+- Pantalla principal de MedAlert.
+- Navegación entre las principales funciones.
+- Registro de medicamentos.
+- Consulta de medicamentos.
+- Edición de medicamentos.
+- Eliminación de medicamentos.
+- Persistencia local.
+- Contador de medicamentos registrados.
+- Ficha de emergencia.
+- Registro de alergias.
+- Registro de antecedentes.
+- Registro de contacto de emergencia.
+- Interfaz desarrollada con Jetpack Compose.
+- Integración del proyecto Android con Git y GitHub.
 
-## \[0.6.0\] - 2026-10-01
+### Pendiente antes de la entrega final
 
-### Agregado
+- Ejecutar pruebas funcionales completas.
+- Verificar persistencia después del reinicio.
+- Revisar validaciones de campos.
+- Realizar mejoras menores de interfaz.
+- Documentar evidencias de funcionamiento.
+- Preparar entrega final del Módulo 8.
 
--   Documentación de los conceptos del módulo 6 relacionados con SMS.
--   Consideración de SMS como posible extensión controlada de MedAlert.
--   Criterios de privacidad, permisos y minimización de datos para
-    funciones de comunicación.
--   Actualización del README y de la Wiki.
--   Creación del CHANGELOG del proyecto.
+## [0.6.0] - 2026-10-01
 
-### Modificado
+### Documentación
 
--   Se reafirma el alcance simple del proyecto: CRUD local de
-    medicamentos y ficha básica de emergencia.
--   Las funciones avanzadas quedan documentadas como mejoras futuras y
-    no como requisitos del núcleo actual.
+- Actualización del README con el avance del Módulo 6.
+- Documentación académica relacionada con SMS en Android.
+- Análisis de permisos, privacidad y minimización de datos.
+- Creación inicial del CHANGELOG.
+- Confirmación del CRUD local y la ficha de emergencia como núcleo de MedAlert.
 
-## \[0.5.0\] - Módulo 5
+## [0.2.0] - Módulo 2
 
-### Agregado
+### Proyecto
 
--   Conceptos de almacenamiento local y bases de datos.
--   Modelo CRUD para medicamentos.
--   Relación entre las pantallas de la aplicación y la persistencia de
-    datos.
+- Definición de MedAlert como proyecto de COM 437.
+- Identificación del problema.
+- Definición del objetivo general.
+- Delimitación del alcance.
+- Diseño conceptual inicial de la aplicación.
 
-### Modificado
+## [0.1.0] - Módulo 1
 
--   Se organiza la aplicación separando conceptualmente interfaz y
-    datos.
+### Repositorio
 
-## \[0.4.0\] - Módulo 4
-
-### Agregado
-
--   Principios de diseño de aplicaciones.
--   Consideraciones de UI/UX y Material Design.
--   Refinamiento de la estructura visual del proyecto.
-
-## \[0.3.0\] - Módulo 3
-
-### Agregado
-
--   Wireframes iniciales de MedAlert.
--   Flujo de navegación propuesto.
--   Definición de pantallas principales.
-
-## \[0.2.0\] - Módulo 2
-
-### Agregado
-
--   Aplicación de conceptos de Activity, Fragment e Intent.
--   Organización inicial de la navegación.
--   Actualización de la documentación del repositorio.
-
-## \[0.1.0\] - Módulo 1
-
-### Agregado
-
--   Creación del repositorio GitHub.
--   README inicial.
--   Introducción al control de versiones con Git y GitHub.
--   Definición inicial del proyecto MedAlert.
+- Creación del repositorio GitHub.
+- Creación del README inicial.
+- Implementación del flujo básico de Git.
+- Creación y fusión de rama de actualización.
+- Reflexión académica sobre control de versiones.
