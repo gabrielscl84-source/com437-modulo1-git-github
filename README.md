@@ -1,152 +1,154 @@
 # MedAlert - COM 437
 
-## Descripción
+## Descripción del proyecto
 
-MedAlert es una aplicación Android desarrollada como proyecto progresivo
-para COM 437: Desarrollo de aplicaciones móviles, Saint Leo University.
+**MedAlert** es una aplicación Android desarrollada como proyecto
+académico para **COM 437: Desarrollo de aplicaciones móviles**. Su
+propósito es facilitar la organización personal de medicamentos mediante
+una interfaz sencilla, permitiendo registrar y consultar información
+básica como nombre del medicamento, dosis y horario. También contempla
+una ficha básica de emergencia con información seleccionada por el
+usuario.
 
-Su propósito es apoyar la organización personal de medicamentos y
-facilitar el acceso rápido a información básica relevante para
-situaciones de emergencia.
+El proyecto mantiene un alcance deliberadamente simple y realizable
+durante el curso: una aplicación Android con almacenamiento local y
+operaciones CRUD. Funcionalidades más complejas, como sincronización en
+la nube, mapas o autenticación remota, se consideran posibles mejoras
+futuras y no forman parte del núcleo actual.
 
-## Problema que aborda
+## Problema que busca resolver
 
-La aplicación busca reducir las dificultades relacionadas con la
-organización de medicamentos, dosis y horarios, además de mantener
-disponible información básica como alergias y antecedentes relevantes.
+Las personas que utilizan varios medicamentos pueden necesitar una forma
+rápida de organizar su información terapéutica básica. MedAlert propone
+centralizar estos datos en el dispositivo móvil para facilitar su
+consulta y actualización.
 
-## Objetivos de MedAlert
+## Objetivo general
 
-- Registrar medicamentos, dosis y horarios.
-- Consultar los medicamentos registrados.
-- Mantener una ficha básica de información de emergencia.
-- Facilitar el acceso organizado a información relevante del usuario.
-- Incorporar progresivamente nuevas funciones durante COM 437.
-- Mantener un desarrollo documentado mediante Git y GitHub.
+Desarrollar una aplicación Android funcional que permita administrar
+localmente medicamentos y datos básicos de emergencia mediante una
+interfaz clara, coherente y fácil de utilizar.
 
-## Funciones planificadas
+## Objetivos específicos
 
-La primera versión de MedAlert tendrá una estructura sencilla que podrá
-ampliarse conforme avance el curso.
+-   Registrar medicamentos con nombre, dosis y horario.
+-   Consultar los medicamentos almacenados.
+-   Editar y eliminar registros existentes.
+-   Mantener una ficha básica de emergencia.
+-   Aplicar principios de Material Design y navegación comprensible.
+-   Persistir información estructurada mediante almacenamiento local.
+-   Documentar progresivamente el desarrollo mediante Git, GitHub,
+    README, Wiki y CHANGELOG.
 
-Entre las funciones previstas se encuentran:
+## Alcance funcional actual
 
-- Registro de medicamentos.
-- Registro de dosis y horarios.
-- Consulta y modificación de medicamentos.
-- Ficha básica de emergencia.
-- Registro de alergias y antecedentes relevantes.
-- Recordatorios de medicamentos.
-- Almacenamiento local de información.
-- Evaluación futura de servicios en la nube.
-- Posible incorporación de ubicación y mapas.
+El alcance del proyecto se concentra en:
 
-## Módulo 1 - Git y GitHub
+1.  **Gestión de medicamentos:** creación, lectura, actualización y
+    eliminación de registros.
+2.  **Ficha de emergencia:** almacenamiento de información básica
+    seleccionada por el usuario.
+3.  **Interfaz Android:** pantallas simples, navegación clara y
+    componentes coherentes con Material Design.
+4.  **Persistencia local:** organización de los datos en el dispositivo.
+5.  **Documentación:** README, Wiki y registro de cambios del proyecto.
 
-Durante el Módulo 1 se establecieron las bases para administrar el
-desarrollo del proyecto mediante control de versiones.
+## Diseño y wireframes
 
-Se realizaron las siguientes actividades:
+Antes de implementar las pantallas se definió un flujo sencillo
+orientado a las tareas principales del usuario. Los wireframes sirven
+como guía para organizar:
 
-- Creación del repositorio en GitHub.
-- Creación y actualización del archivo README.md.
-- Uso de commits para registrar cambios.
-- Creación de una rama independiente.
-- Modificación del proyecto dentro de la rama.
-- Creación de un pull request.
-- Revisión y fusión de los cambios con la rama `main`.
+-   Pantalla principal.
+-   Lista de medicamentos.
+-   Formulario para agregar o editar medicamentos.
+-   Ficha de emergencia.
 
-Este flujo permitirá conservar una historia verificable de la evolución
-de MedAlert durante el curso.
+La prioridad de diseño es reducir pasos innecesarios y mantener visibles
+las funciones principales.
 
-## Módulo 2 - Diseño de aplicaciones Android
+## Arquitectura propuesta
 
-Durante el Módulo 2 se inicia la organización de la arquitectura y
-navegación de MedAlert mediante conceptos fundamentales de Android.
+El proyecto separa conceptualmente la interfaz de usuario de la gestión
+de datos. La aplicación se organiza alrededor de una actividad principal
+y pantallas/componentes destinados a mostrar y modificar la información.
+La persistencia local se mantiene separada de la presentación para
+facilitar mantenimiento y futuras mejoras.
 
-### Activities
+## Base de datos y almacenamiento
 
-Las Activities representarán puntos principales de interacción con el
-usuario. La estructura preliminar contempla una pantalla principal desde
-la cual se podrá acceder a las distintas funciones de MedAlert.
+MedAlert requiere conservar información después de cerrar la aplicación.
+Por ello, los medicamentos y datos de emergencia se modelan como
+información estructurada para almacenamiento local. Las operaciones
+principales corresponden al modelo CRUD:
 
-### Fragments
+-   **Create:** agregar un medicamento.
+-   **Read:** consultar medicamentos.
+-   **Update:** modificar dosis, horario u otros datos.
+-   **Delete:** eliminar un registro.
 
-Los Fragments permitirán organizar y reutilizar partes de la interfaz de
-usuario dentro de las Activities.
+## Material Design
 
-Se contempla su utilización para secciones como:
+La interfaz busca aplicar principios de Material Design mediante
+jerarquía visual, botones claramente identificables, formularios
+simples, tarjetas o listas para presentar información y
+retroalimentación visual ante las acciones del usuario.
 
-- Lista de medicamentos.
-- Información de emergencia.
-- Visualización de información del usuario.
+## SMS y comunicación
 
-### Intents
-
-Los Intents permitirán establecer la navegación y comunicación entre
-diferentes componentes de la aplicación.
-
-Por ejemplo, podrán utilizarse para pasar desde la pantalla principal
-hacia una pantalla destinada al registro o consulta de medicamentos.
-
-## Estructura preliminar de navegación
-
-La navegación inicial propuesta es:
-
-`Pantalla principal`
-
-→ `Medicamentos`
-
-→ `Agregar medicamento`
-
-→ `Detalle del medicamento`
-
-→ `Ficha de emergencia`
-
-Esta estructura podrá modificarse conforme se desarrollen y prueben las
-funciones de la aplicación.
+El módulo 6 introduce el uso de SMS en Android. Para MedAlert, esta
+tecnología se documenta como una posible extensión controlada para
+compartir información seleccionada por el usuario con un contacto. No se
+considera indispensable para el núcleo CRUD y cualquier implementación
+deberá respetar permisos, privacidad y minimización de datos.
 
 ## Tecnologías y herramientas
 
-El proyecto utilizará progresivamente:
-
-- Android Studio
-- Git
-- GitHub
-- Activities
-- Fragments
-- Intents
-- Material Design
-- Almacenamiento local
-- Servicios en la nube cuando sean necesarios
+-   Android Studio
+-   Kotlin
+-   Kotlin DSL
+-   Android SDK
+-   API mínima: Android 7.0 Nougat (API 24)
+-   Git
+-   GitHub
+-   Emulador Android / Pixel estándar
 
 ## Control de versiones
 
-Cada avance significativo será registrado mediante Git.
-
-El flujo de trabajo utilizado será:
-
-1. Crear o seleccionar una rama de trabajo.
-2. Realizar las modificaciones.
-3. Revisar los cambios.
-4. Crear un commit.
-5. Publicar los cambios en GitHub.
-6. Crear un pull request cuando corresponda.
-7. Integrar los cambios aprobados en `main`.
+El repositorio utiliza Git y GitHub para documentar el progreso del
+proyecto. Los cambios relevantes se registran mediante commits
+descriptivos y se resumen en `CHANGELOG.md`.
 
 ## Estado del proyecto
 
-**Módulo 1:** completado.
+**En desarrollo - avance del módulo 6.**
 
-**Módulo 2:** definición de la aplicación y diseño preliminar de
-Activities, Fragments e Intents.
+Hasta este punto se han trabajado los fundamentos de Android,
+arquitectura, Activities/Fragments/Intents, wireframes, diseño de
+interfaz, Material Design, almacenamiento local/bases de datos y
+conceptos de SMS. El proyecto continúa enfocado en completar una versión
+sencilla y funcional antes de la entrega final del módulo 8.
 
-**Próximo avance:** creación de la estructura inicial de MedAlert en
-Android Studio y publicación progresiva del código en GitHub.
+## Próximos pasos
+
+-   Consolidar las pantallas principales.
+-   Completar el CRUD local de medicamentos.
+-   Validar navegación y formularios.
+-   Revisar la ficha de emergencia.
+-   Realizar pruebas en el emulador.
+-   Mantener actualizado el README, Wiki y CHANGELOG.
+-   Preparar el código para la entrega final del módulo 8.
+
+## Repositorio
+
+Repositorio del proyecto:\
+https://github.com/gabrielscl84-source/com437-modulo1-git-github
+
+Wiki del proyecto:\
+https://github.com/gabrielscl84-source/com437-modulo1-git-github/wiki
 
 ## Autor
 
-Gabriel Antonio Solórzano García  
-Saint Leo University  
-COM 437 - Desarrollo de aplicaciones móviles  
-2026
+**Gabriel Antonio Solórzano García**\
+Saint Leo University\
+COM 437 - Desarrollo de aplicaciones móviles
